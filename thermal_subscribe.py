@@ -12,11 +12,11 @@ def callback(message):
     print(message.data)
  # bicubicのデータ
 		frame = np.array(list(message.data))
-		sensordata = frame.reshape(height,width)
+    sensordata = frame.reshape(height,width)
     fig = plt.imshow(data, cmap="inferno", interpolation="bicubic")
     plt.colorbar()
-		plt.pause(.1)
-		plt.clf()
+    plt.pause(.1)
+    plt.clf()
 	
 
 if __name__ == "__main__":
